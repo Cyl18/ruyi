@@ -221,7 +221,7 @@ def get_versions() -> dict[str, str]:
     with open("pyproject.toml", "rb") as fp:
         pyproject = tomllib.load(fp)
 
-    version = pyproject["project"]["version"]
+    version = pyproject["tool"]["poetry"]["version"]
 
     return {
         "git_commit": get_git_commit(),

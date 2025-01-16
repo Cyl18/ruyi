@@ -22,7 +22,7 @@ def main(argv: list[str]) -> int:
     with open(project_root / "pyproject.toml", "rb") as fp:
         pyproject = tomllib.load(fp)
 
-    version = pyproject["project"]["version"]
+    version = pyproject["tool"]["poetry"]["version"]
 
     # layout of release-artifacts-dir just after the download-artifacts@v4
     # action:
