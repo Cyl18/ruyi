@@ -53,7 +53,7 @@ jobs:
 
       - name: Install Poetry
         if: success() && !matrix.baseline
-        run: pipx install poetry
+        run: pipx install poetry==1.8.4
 
       # NOTE: the Poetry venv is created during this step
       - uses: actions/setup-python@v5
