@@ -52,6 +52,7 @@ jobs:
         run: ./scripts/install-baseline-deps.sh
 
       - name: Install Poetry
+        if: success() && !matrix.baseline
         run: pipx install poetry==1.8.4
 
       # NOTE: the Poetry venv is created during this step
